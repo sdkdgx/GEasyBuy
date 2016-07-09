@@ -1,0 +1,20 @@
+#MyEclipse Hibernate Properties
+#Wed Jul 06 09:53:43 CST 2016
+genBasicCompId=false
+sessionFactoryName=sdust.easybuy.model.HibernateSessionFactory
+profile=
+daoSFId=
+jndiPath=
+detectM2M=true
+reStrategyClass=
+detectO2O=true
+springDaoFile=
+useJavaTypes=true
+keyGenerator=
+genVersionTag=false
+sessionFactoryId=sessionFactory
+basePersistenceClass=
+genAnnotations=false
+reSettingsFile=
+configFile=/easybuy/src/config/applicationContext.xml
+createConfigFile=true
