@@ -5,10 +5,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * EasybuyUser entity. @author MyEclipse Persistence Tools
+ * EasyBuyUser entity. @author MyEclipse Persistence Tools
  */
 
-public class EasyBuyUser {
+public class EasyBuyUser implements java.io.Serializable {
 
 	// Fields
 
@@ -22,8 +22,9 @@ public class EasyBuyUser {
 	private String euMobile;
 	private String euAddress;
 	private Integer euStatus;
-	private Set easybuyComments = new HashSet(0);
-	private Set easybuyOrders = new HashSet(0);
+	private Set easyBuyComments = new HashSet(0);
+	private Set easyBuyOrders = new HashSet(0);
+	private Set easyBuyShoppingCarts = new HashSet(0);
 
 	// Constructors
 
@@ -32,31 +33,17 @@ public class EasyBuyUser {
 	}
 
 	/** minimal constructor */
-	public EasyBuyUser(String euUserName, String euPassword, Integer euSex,
-			Date euBirthday, String euIdentityCode, String euEmail,
-			String euMobile, String euAddress, Integer euStatus) {
+	public EasyBuyUser(String euUserName, String euPassword, Integer euStatus) {
 		this.euUserName = euUserName;
 		this.euPassword = euPassword;
-		this.euSex = euSex;
-		this.euBirthday = euBirthday;
-		this.euIdentityCode = euIdentityCode;
-		this.euEmail = euEmail;
-		this.euMobile = euMobile;
-		this.euAddress = euAddress;
 		this.euStatus = euStatus;
-	}
-
-	public EasyBuyUser(String euUserName, String euPassword) {
-		super();
-		this.euUserName = euUserName;
-		this.euPassword = euPassword;
 	}
 
 	/** full constructor */
 	public EasyBuyUser(String euUserName, String euPassword, Integer euSex,
 			Date euBirthday, String euIdentityCode, String euEmail,
 			String euMobile, String euAddress, Integer euStatus,
-			Set easybuyComments, Set easybuyOrders) {
+			Set easyBuyComments, Set easyBuyOrders, Set easyBuyShoppingCarts) {
 		this.euUserName = euUserName;
 		this.euPassword = euPassword;
 		this.euSex = euSex;
@@ -66,8 +53,9 @@ public class EasyBuyUser {
 		this.euMobile = euMobile;
 		this.euAddress = euAddress;
 		this.euStatus = euStatus;
-		this.easybuyComments = easybuyComments;
-		this.easybuyOrders = easybuyOrders;
+		this.easyBuyComments = easyBuyComments;
+		this.easyBuyOrders = easyBuyOrders;
+		this.easyBuyShoppingCarts = easyBuyShoppingCarts;
 	}
 
 	// Property accessors
@@ -152,20 +140,34 @@ public class EasyBuyUser {
 		this.euStatus = euStatus;
 	}
 
-	public Set getEasybuyComments() {
-		return this.easybuyComments;
+	public Set getEasyBuyComments() {
+		return this.easyBuyComments;
 	}
 
-	public void setEasybuyComments(Set easybuyComments) {
-		this.easybuyComments = easybuyComments;
+	public void setEasyBuyComments(Set easyBuyComments) {
+		this.easyBuyComments = easyBuyComments;
 	}
 
-	public Set getEasybuyOrders() {
-		return this.easybuyOrders;
+	public Set getEasyBuyOrders() {
+		return this.easyBuyOrders;
 	}
 
-	public void setEasybuyOrders(Set easybuyOrders) {
-		this.easybuyOrders = easybuyOrders;
+	public void setEasyBuyOrders(Set easyBuyOrders) {
+		this.easyBuyOrders = easyBuyOrders;
+	}
+
+	public Set getEasyBuyShoppingCarts() {
+		return this.easyBuyShoppingCarts;
+	}
+
+	public void setEasyBuyShoppingCarts(Set easyBuyShoppingCarts) {
+		this.easyBuyShoppingCarts = easyBuyShoppingCarts;
+	}
+
+	public EasyBuyUser(String euUserName, String euPassword) {
+		super();
+		this.euUserName = euUserName;
+		this.euPassword = euPassword;
 	}
 
 	@Override
@@ -175,8 +177,9 @@ public class EasyBuyUser {
 				+ euSex + ", euBirthday=" + euBirthday + ", euIdentityCode="
 				+ euIdentityCode + ", euEmail=" + euEmail + ", euMobile="
 				+ euMobile + ", euAddress=" + euAddress + ", euStatus="
-				+ euStatus + ", easybuyComments=" + easybuyComments
-				+ ", easybuyOrders=" + easybuyOrders + "]";
+				+ euStatus + ", easyBuyComments=" + easyBuyComments
+				+ ", easyBuyOrders=" + easyBuyOrders
+				+ ", easyBuyShoppingCarts=" + easyBuyShoppingCarts + "]";
 	}
 
 }

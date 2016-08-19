@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+<table name="easybuy_user" catalog="easybuysystem"
+		class="sdust.easybuy.model.EasyBuyUser">
+	</table>
+	<table name="easybuy_comment" catalog="easybuysystem"
+		class="sdust.easybuy.model.EasyBuyComment">
+	</table>
+	<table name="easybuy_news" catalog="easybuysystem"
+		class="sdust.easybuy.model.EasyBuyNews">
+	</table>
+	<table name="easybuy_order_detail" catalog="easybuysystem"
+		class="sdust.easybuy.model.EasyBuyOrderDetail">
+	</table>
+	<table name="easybuy_order" catalog="easybuysystem"
+		class="sdust.easybuy.model.EasyBuyOrder">
+	</table>
+	<table name="easybuy_product_category" catalog="easybuysystem"
+		class="sdust.easybuy.model.EasyBuyProductCategory">
+	</table>
+	<table name="easybuy_product" catalog="easybuysystem"
+		class="sdust.easybuy.model.EasyBuyProduct">
+	</table>
+	<table name="easybuy_shopping_cart" catalog="easybuysystem" class="sdust.easybuy.model.EasyBuyShoppingCart"></table>
+</hibernate-reverse-engineering>

@@ -1,16 +1,16 @@
 package sdust.easybuy.model;
 
 /**
- * EasybuyOrderDetail entity. @author MyEclipse Persistence Tools
+ * EasyBuyOrderDetail entity. @author MyEclipse Persistence Tools
  */
 
-public class EasyBuyOrderDetail {
+public class EasyBuyOrderDetail implements java.io.Serializable {
 
 	// Fields
 
 	private Integer eodId;
-	private EasyBuyProduct easybuyProduct;
-	private EasyBuyOrder easybuyOrder;
+	private EasyBuyProduct easyBuyProduct;
+	private EasyBuyOrder easyBuyOrder;
 	private Integer eodQuantity;
 
 	// Constructors
@@ -20,10 +20,10 @@ public class EasyBuyOrderDetail {
 	}
 
 	/** full constructor */
-	public EasyBuyOrderDetail(EasyBuyProduct easybuyProduct,
-			EasyBuyOrder easybuyOrder, Integer eodQuantity) {
-		this.easybuyProduct = easybuyProduct;
-		this.easybuyOrder = easybuyOrder;
+	public EasyBuyOrderDetail(EasyBuyProduct easyBuyProduct,
+			EasyBuyOrder easyBuyOrder, Integer eodQuantity) {
+		this.easyBuyProduct = easyBuyProduct;
+		this.easyBuyOrder = easyBuyOrder;
 		this.eodQuantity = eodQuantity;
 	}
 
@@ -37,20 +37,20 @@ public class EasyBuyOrderDetail {
 		this.eodId = eodId;
 	}
 
-	public EasyBuyProduct getEasybuyProduct() {
-		return this.easybuyProduct;
+	public EasyBuyProduct getEasyBuyProduct() {
+		return this.easyBuyProduct;
 	}
 
-	public void setEasybuyProduct(EasyBuyProduct easybuyProduct) {
-		this.easybuyProduct = easybuyProduct;
+	public void setEasyBuyProduct(EasyBuyProduct easyBuyProduct) {
+		this.easyBuyProduct = easyBuyProduct;
 	}
 
-	public EasyBuyOrder getEasybuyOrder() {
-		return this.easybuyOrder;
+	public EasyBuyOrder getEasyBuyOrder() {
+		return this.easyBuyOrder;
 	}
 
-	public void setEasybuyOrder(EasyBuyOrder easybuyOrder) {
-		this.easybuyOrder = easybuyOrder;
+	public void setEasyBuyOrder(EasyBuyOrder easyBuyOrder) {
+		this.easyBuyOrder = easyBuyOrder;
 	}
 
 	public Integer getEodQuantity() {

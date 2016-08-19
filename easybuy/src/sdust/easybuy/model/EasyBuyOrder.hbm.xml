@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="sdust.easybuy.model.EasyBuyOrder" table="easybuy_order" catalog="easybuysystem">
+        <id name="eoId" type="java.lang.Integer">
+            <column name="eo_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="easyBuyUser" class="sdust.easybuy.model.EasyBuyUser" fetch="select">
+            <column name="eu_user_id" not-null="true" />
+        </many-to-one>
+        <property name="eoCreateTime" type="java.sql.Timestamp">
+            <column name="eo_create_time" length="19" not-null="true" />
+        </property>
+        <property name="eoStatus" type="java.lang.Integer">
+            <column name="eo_status" not-null="true" />
+        </property>
+        <property name="eoType" type="java.lang.Integer">
+            <column name="eo_type" not-null="true" />
+        </property>
+        <property name="eoRerAddress" type="java.lang.String">
+            <column name="eo_rer_address" length="30" not-null="true" />
+        </property>
+        <set name="easyBuyOrderDetails" inverse="true" cascade="delete">
+            <key>
+                <column name="eo_id" not-null="true" />
+            </key>
+            <one-to-many class="sdust.easybuy.model.EasyBuyOrderDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

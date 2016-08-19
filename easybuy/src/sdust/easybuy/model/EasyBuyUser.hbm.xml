@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="sdust.easybuy.model.EasyBuyUser" table="easybuy_user" catalog="easybuysystem">
+        <id name="euUserId" type="java.lang.Integer">
+            <column name="eu_user_id" />
+            <generator class="identity" />
+        </id>
+        <property name="euUserName" type="java.lang.String">
+            <column name="eu_user_name" length="30" not-null="true" />
+        </property>
+        <property name="euPassword" type="java.lang.String">
+            <column name="eu_password" length="30" not-null="true" />
+        </property>
+        <property name="euSex" type="java.lang.Integer">
+            <column name="eu_sex" />
+        </property>
+        <property name="euBirthday" type="java.sql.Date">
+            <column name="eu_birthday" length="10" />
+        </property>
+        <property name="euIdentityCode" type="java.lang.String">
+            <column name="eu_identity_code" length="20" />
+        </property>
+        <property name="euEmail" type="java.lang.String">
+            <column name="eu_email" length="30" />
+        </property>
+        <property name="euMobile" type="java.lang.String">
+            <column name="eu_mobile" length="15" />
+        </property>
+        <property name="euAddress" type="java.lang.String">
+            <column name="eu_address" length="50" />
+        </property>
+        <property name="euStatus" type="java.lang.Integer">
+            <column name="eu_status" not-null="true" />
+        </property>
+        <set name="easyBuyComments" inverse="true">
+            <key>
+                <column name="eu_user_id" />
+            </key>
+            <one-to-many class="sdust.easybuy.model.EasyBuyComment" />
+        </set>
+        <set name="easyBuyOrders" inverse="true">
+            <key>
+                <column name="eu_user_id" not-null="true" />
+            </key>
+            <one-to-many class="sdust.easybuy.model.EasyBuyOrder" />
+        </set>
+        <set name="easyBuyShoppingCarts" inverse="true" cascade="all">
+            <key>
+                <column name="eu_user_id" not-null="true" />
+            </key>
+            <one-to-many class="sdust.easybuy.model.EasyBuyShoppingCart" />
+        </set>
+    </class>
+</hibernate-mapping>

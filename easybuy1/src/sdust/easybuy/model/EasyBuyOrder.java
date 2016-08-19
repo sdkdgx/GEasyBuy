@@ -5,20 +5,20 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * EasybuyOrder entity. @author MyEclipse Persistence Tools
+ * EasyBuyOrder entity. @author MyEclipse Persistence Tools
  */
 
-public class EasyBuyOrder {
+public class EasyBuyOrder implements java.io.Serializable {
 
 	// Fields
 
 	private Integer eoId;
-	private EasyBuyUser easybuyUser;
+	private EasyBuyUser easyBuyUser;
 	private Timestamp eoCreateTime;
 	private Integer eoStatus;
 	private Integer eoType;
 	private String eoRerAddress;
-	private Set easybuyOrderDetails = new HashSet(0);
+	private Set easyBuyOrderDetails = new HashSet(0);
 
 	// Constructors
 
@@ -27,9 +27,9 @@ public class EasyBuyOrder {
 	}
 
 	/** minimal constructor */
-	public EasyBuyOrder(EasyBuyUser easybuyUser, Timestamp eoCreateTime,
+	public EasyBuyOrder(EasyBuyUser easyBuyUser, Timestamp eoCreateTime,
 			Integer eoStatus, Integer eoType, String eoRerAddress) {
-		this.easybuyUser = easybuyUser;
+		this.easyBuyUser = easyBuyUser;
 		this.eoCreateTime = eoCreateTime;
 		this.eoStatus = eoStatus;
 		this.eoType = eoType;
@@ -37,15 +37,15 @@ public class EasyBuyOrder {
 	}
 
 	/** full constructor */
-	public EasyBuyOrder(EasyBuyUser easybuyUser, Timestamp eoCreateTime,
+	public EasyBuyOrder(EasyBuyUser easyBuyUser, Timestamp eoCreateTime,
 			Integer eoStatus, Integer eoType, String eoRerAddress,
-			Set easybuyOrderDetails) {
-		this.easybuyUser = easybuyUser;
+			Set easyBuyOrderDetails) {
+		this.easyBuyUser = easyBuyUser;
 		this.eoCreateTime = eoCreateTime;
 		this.eoStatus = eoStatus;
 		this.eoType = eoType;
 		this.eoRerAddress = eoRerAddress;
-		this.easybuyOrderDetails = easybuyOrderDetails;
+		this.easyBuyOrderDetails = easyBuyOrderDetails;
 	}
 
 	// Property accessors
@@ -58,12 +58,12 @@ public class EasyBuyOrder {
 		this.eoId = eoId;
 	}
 
-	public EasyBuyUser getEasybuyUser() {
-		return this.easybuyUser;
+	public EasyBuyUser getEasyBuyUser() {
+		return this.easyBuyUser;
 	}
 
-	public void setEasybuyUser(EasyBuyUser easybuyUser) {
-		this.easybuyUser = easybuyUser;
+	public void setEasyBuyUser(EasyBuyUser easyBuyUser) {
+		this.easyBuyUser = easyBuyUser;
 	}
 
 	public Timestamp getEoCreateTime() {
@@ -98,12 +98,12 @@ public class EasyBuyOrder {
 		this.eoRerAddress = eoRerAddress;
 	}
 
-	public Set getEasybuyOrderDetails() {
-		return this.easybuyOrderDetails;
+	public Set getEasyBuyOrderDetails() {
+		return this.easyBuyOrderDetails;
 	}
 
-	public void setEasybuyOrderDetails(Set easybuyOrderDetails) {
-		this.easybuyOrderDetails = easybuyOrderDetails;
+	public void setEasyBuyOrderDetails(Set easyBuyOrderDetails) {
+		this.easyBuyOrderDetails = easyBuyOrderDetails;
 	}
 
 }

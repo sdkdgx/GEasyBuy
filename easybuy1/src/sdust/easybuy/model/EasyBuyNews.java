@@ -3,10 +3,10 @@ package sdust.easybuy.model;
 import java.util.Date;
 
 /**
- * EasybuyNews entity. @author MyEclipse Persistence Tools
+ * EasyBuyNews entity. @author MyEclipse Persistence Tools
  */
 
-public class EasyBuyNews {
+public class EasyBuyNews implements java.io.Serializable {
 
 	// Fields
 

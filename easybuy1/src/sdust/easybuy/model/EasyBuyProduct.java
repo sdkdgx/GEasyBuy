@@ -4,22 +4,24 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * EasybuyProduct entity. @author MyEclipse Persistence Tools
+ * EasyBuyProduct entity. @author MyEclipse Persistence Tools
  */
 
-public class EasyBuyProduct {
+public class EasyBuyProduct implements java.io.Serializable {
 
 	// Fields
 
 	private Integer epId;
-	private EasyBuyProductCategory easybuyProductCategory;
+	private EasyBuyProductCategory easyBuyProductCategory;
 	private String epName;
 	private String epDescription;
 	private Double epPrice;
 	private Integer epStock;
 	private Integer epcChildId;
 	private String epFileName;
-	private Set easybuyOrderDetails = new HashSet(0);
+	private Integer epSpecial;
+	private Set easyBuyOrderDetails = new HashSet(0);
+	private Set easyBuyShoppingCarts = new HashSet(0);
 
 	// Constructors
 
@@ -28,31 +30,35 @@ public class EasyBuyProduct {
 	}
 
 	/** minimal constructor */
-	public EasyBuyProduct(EasyBuyProductCategory easybuyProductCategory,
+	public EasyBuyProduct(EasyBuyProductCategory easyBuyProductCategory,
 			String epName, String epDescription, Double epPrice,
-			Integer epStock, Integer epcChildId, String epFileName) {
-		this.easybuyProductCategory = easybuyProductCategory;
+			Integer epStock, Integer epcChildId, String epFileName,
+			Integer epSpecial) {
+		this.easyBuyProductCategory = easyBuyProductCategory;
 		this.epName = epName;
 		this.epDescription = epDescription;
 		this.epPrice = epPrice;
 		this.epStock = epStock;
 		this.epcChildId = epcChildId;
 		this.epFileName = epFileName;
+		this.epSpecial = epSpecial;
 	}
 
 	/** full constructor */
-	public EasyBuyProduct(EasyBuyProductCategory easybuyProductCategory,
+	public EasyBuyProduct(EasyBuyProductCategory easyBuyProductCategory,
 			String epName, String epDescription, Double epPrice,
 			Integer epStock, Integer epcChildId, String epFileName,
-			Set easybuyOrderDetails) {
-		this.easybuyProductCategory = easybuyProductCategory;
+			Integer epSpecial, Set easyBuyOrderDetails, Set easyBuyShoppingCarts) {
+		this.easyBuyProductCategory = easyBuyProductCategory;
 		this.epName = epName;
 		this.epDescription = epDescription;
 		this.epPrice = epPrice;
 		this.epStock = epStock;
 		this.epcChildId = epcChildId;
 		this.epFileName = epFileName;
-		this.easybuyOrderDetails = easybuyOrderDetails;
+		this.epSpecial = epSpecial;
+		this.easyBuyOrderDetails = easyBuyOrderDetails;
+		this.easyBuyShoppingCarts = easyBuyShoppingCarts;
 	}
 
 	// Property accessors
@@ -65,13 +71,13 @@ public class EasyBuyProduct {
 		this.epId = epId;
 	}
 
-	public EasyBuyProductCategory getEasybuyProductCategory() {
-		return this.easybuyProductCategory;
+	public EasyBuyProductCategory getEasyBuyProductCategory() {
+		return this.easyBuyProductCategory;
 	}
 
-	public void setEasybuyProductCategory(
-			EasyBuyProductCategory easybuyProductCategory) {
-		this.easybuyProductCategory = easybuyProductCategory;
+	public void setEasyBuyProductCategory(
+			EasyBuyProductCategory easyBuyProductCategory) {
+		this.easyBuyProductCategory = easyBuyProductCategory;
 	}
 
 	public String getEpName() {
@@ -122,24 +128,28 @@ public class EasyBuyProduct {
 		this.epFileName = epFileName;
 	}
 
-	public Set getEasybuyOrderDetails() {
-		return this.easybuyOrderDetails;
+	public Integer getEpSpecial() {
+		return this.epSpecial;
 	}
 
-	public void setEasybuyOrderDetails(Set easybuyOrderDetails) {
-		this.easybuyOrderDetails = easybuyOrderDetails;
+	public void setEpSpecial(Integer epSpecial) {
+		this.epSpecial = epSpecial;
 	}
 
-	@Override
-	public String toString() {
-		return "EasyBuyProduct [epId=" + epId + ", easybuyProductCategory="
-				+ easybuyProductCategory + ", epName=" + epName
-				+ ", epDescription=" + epDescription + ", epPrice=" + epPrice
-				+ ", epStock=" + epStock + ", epcChildId=" + epcChildId
-				+ ", epFileName=" + epFileName + ", easybuyOrderDetails="
-				+ easybuyOrderDetails + "]";
+	public Set getEasyBuyOrderDetails() {
+		return this.easyBuyOrderDetails;
 	}
-	
-	
+
+	public void setEasyBuyOrderDetails(Set easyBuyOrderDetails) {
+		this.easyBuyOrderDetails = easyBuyOrderDetails;
+	}
+
+	public Set getEasyBuyShoppingCarts() {
+		return this.easyBuyShoppingCarts;
+	}
+
+	public void setEasyBuyShoppingCarts(Set easyBuyShoppingCarts) {
+		this.easyBuyShoppingCarts = easyBuyShoppingCarts;
+	}
 
 }

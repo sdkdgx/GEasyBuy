@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="sdust.easybuy.model.EasyBuyComment" table="easybuy_comment" catalog="easybuysystem">
+        <id name="ecId" type="java.lang.Integer">
+            <column name="ec_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="easyBuyUser" class="sdust.easybuy.model.EasyBuyUser" fetch="select">
+            <column name="eu_user_id" />
+        </many-to-one>
+        <property name="ecReply" type="java.lang.String">
+            <column name="ec_reply" length="100" />
+        </property>
+        <property name="ecContent" type="java.lang.String">
+            <column name="ec_content" length="200" not-null="true" />
+        </property>
+        <property name="ecCreateTime" type="java.sql.Timestamp">
+            <column name="ec_create_time" length="19" not-null="true" />
+        </property>
+        <property name="ecReplyTime" type="java.sql.Timestamp">
+            <column name="ec_reply_time" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

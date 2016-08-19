@@ -30,16 +30,16 @@ public class EasyBuyUserDao extends EasyBuyBaseDao<EasyBuyUser> {
 
 	public static void main(String[] args) {
 		
-		EasyBuyUser user = new EasyBuyUser();
-		user.setEuUserName("test");
-		user.setEuPassword("test");
-		user.setEuMobile("123123123");
-		user.setEuStatus(1);
-		EasyBuyUserDao dao = new EasyBuyUserDao();
-		dao.saveOrUpdate(user);
-//		EasyBuyUser user = new EasyBuyUserDao().getByUser(new EasyBuyUser(
-//				"admin", "admin"));
-//		System.out.println(user);
+//		EasyBuyUser user = new EasyBuyUser();
+//		user.setEuUserName("test");
+//		user.setEuPassword("test");
+//		user.setEuMobile("123123123");
+//		user.setEuStatus(1);
+//		EasyBuyUserDao dao = new EasyBuyUserDao();
+//		dao.saveOrUpdate(user);
+		EasyBuyUser user = new EasyBuyUserDao().getByUser(new EasyBuyUser(
+				"admin", "admin"));
+		System.out.println(user);
 
 	}
 

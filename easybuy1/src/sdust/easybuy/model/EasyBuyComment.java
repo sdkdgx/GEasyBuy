@@ -3,15 +3,15 @@ package sdust.easybuy.model;
 import java.sql.Timestamp;
 
 /**
- * EasybuyComment entity. @author MyEclipse Persistence Tools
+ * EasyBuyComment entity. @author MyEclipse Persistence Tools
  */
 
-public class EasyBuyComment{
+public class EasyBuyComment implements java.io.Serializable {
 
 	// Fields
 
 	private Integer ecId;
-	private EasyBuyUser easybuyUser;
+	private EasyBuyUser easyBuyUser;
 	private String ecReply;
 	private String ecContent;
 	private Timestamp ecCreateTime;
@@ -24,18 +24,15 @@ public class EasyBuyComment{
 	}
 
 	/** minimal constructor */
-	public EasyBuyComment(String ecReply, String ecContent,
-			Timestamp ecCreateTime, Timestamp ecReplyTime) {
-		this.ecReply = ecReply;
+	public EasyBuyComment(String ecContent, Timestamp ecCreateTime) {
 		this.ecContent = ecContent;
 		this.ecCreateTime = ecCreateTime;
-		this.ecReplyTime = ecReplyTime;
 	}
 
 	/** full constructor */
-	public EasyBuyComment(EasyBuyUser easybuyUser, String ecReply,
+	public EasyBuyComment(EasyBuyUser easyBuyUser, String ecReply,
 			String ecContent, Timestamp ecCreateTime, Timestamp ecReplyTime) {
-		this.easybuyUser = easybuyUser;
+		this.easyBuyUser = easyBuyUser;
 		this.ecReply = ecReply;
 		this.ecContent = ecContent;
 		this.ecCreateTime = ecCreateTime;
@@ -52,12 +49,12 @@ public class EasyBuyComment{
 		this.ecId = ecId;
 	}
 
-	public EasyBuyUser getEasybuyUser() {
-		return this.easybuyUser;
+	public EasyBuyUser getEasyBuyUser() {
+		return this.easyBuyUser;
 	}
 
-	public void setEasybuyUser(EasyBuyUser easybuyUser) {
-		this.easybuyUser = easybuyUser;
+	public void setEasyBuyUser(EasyBuyUser easyBuyUser) {
+		this.easyBuyUser = easyBuyUser;
 	}
 
 	public String getEcReply() {

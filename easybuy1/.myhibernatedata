@@ -1,7 +1,7 @@
 #MyEclipse Hibernate Properties
-#Wed Jul 06 09:53:43 CST 2016
+#Sat Jul 09 18:12:14 CST 2016
 genBasicCompId=false
-sessionFactoryName=sdust.easybuy.model.HibernateSessionFactory
+sessionFactoryName=
 profile=
 daoSFId=
 jndiPath=
@@ -15,6 +15,6 @@ genVersionTag=false
 sessionFactoryId=sessionFactory
 basePersistenceClass=
 genAnnotations=false
-reSettingsFile=
+reSettingsFile=/easybuy1/hibernate.reveng.xml
 configFile=/easybuy/src/config/applicationContext.xml
 createConfigFile=true

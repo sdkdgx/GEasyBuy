@@ -1,0 +1,17 @@
+#MyEclipse Hibernate Properties
+#Sat Jul 09 19:26:16 CST 2016
+genVersionTag=false
+sessionFactoryName=sdust.easybuy.model.HibernateSessionFactory
+genAnnotations=false
+configFile=/easybuy/src/config/hibernate.cfg.xml
+reStrategyClass=
+sessionFactoryId=
+profile=
+detectM2M=false
+genBasicCompId=false
+keyGenerator=
+createConfigFile=true
+basePersistenceClass=
+detectO2O=false
+useJavaTypes=true
+reSettingsFile=

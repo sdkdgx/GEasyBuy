@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="sdust.easybuy.model.EasyBuyShoppingCart" table="easybuy_shopping_cart" catalog="easybuysystem">
+        <id name="escId" type="java.lang.Integer">
+            <column name="esc_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="easyBuyProduct" class="sdust.easybuy.model.EasyBuyProduct" fetch="select">
+            <column name="ep_id" not-null="false" />
+        </many-to-one>
+        <many-to-one name="easyBuyUser" class="sdust.easybuy.model.EasyBuyUser" fetch="select">
+            <column name="eu_user_id" not-null="true" />
+        </many-to-one>
+        <property name="escProductQuantity" type="java.lang.Integer">
+            <column name="esc_product_quantity" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

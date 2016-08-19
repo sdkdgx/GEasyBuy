@@ -4,17 +4,17 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * EasybuyProductCategory entity. @author MyEclipse Persistence Tools
+ * EasyBuyProductCategory entity. @author MyEclipse Persistence Tools
  */
 
-public class EasyBuyProductCategory {
+public class EasyBuyProductCategory implements java.io.Serializable {
 
 	// Fields
 
 	private Integer epcId;
 	private String epcName;
 	private Integer epcParentId;
-	private Set easybuyProducts = new HashSet(0);
+	private Set easyBuyProducts = new HashSet(0);
 
 	// Constructors
 
@@ -29,10 +29,10 @@ public class EasyBuyProductCategory {
 
 	/** full constructor */
 	public EasyBuyProductCategory(String epcName, Integer epcParentId,
-			Set easybuyProducts) {
+			Set easyBuyProducts) {
 		this.epcName = epcName;
 		this.epcParentId = epcParentId;
-		this.easybuyProducts = easybuyProducts;
+		this.easyBuyProducts = easyBuyProducts;
 	}
 
 	// Property accessors
@@ -61,12 +61,12 @@ public class EasyBuyProductCategory {
 		this.epcParentId = epcParentId;
 	}
 
-	public Set getEasybuyProducts() {
-		return this.easybuyProducts;
+	public Set getEasyBuyProducts() {
+		return this.easyBuyProducts;
 	}
 
-	public void setEasybuyProducts(Set easybuyProducts) {
-		this.easybuyProducts = easybuyProducts;
+	public void setEasyBuyProducts(Set easyBuyProducts) {
+		this.easyBuyProducts = easyBuyProducts;
 	}
 
 }

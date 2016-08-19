@@ -22,7 +22,7 @@
         <mapping resource="sdust/easybuy/model/EasyBuyOrderDetail.hbm.xml" />
         <mapping resource="sdust/easybuy/model/EasyBuyProduct.hbm.xml" />
         <mapping resource="sdust/easybuy/model/EasyBuyProductCategory.hbm.xml" />
-    
+    	<mapping resource="sdust/easybuy/model/EasyBuyShoppingCart.hbm.xml" />
     </session-factory>
 
 </hibernate-configuration>
